@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useRef } from 'react';
 import PromptInput from './components/PromptInput';
 import ResultView from './components/ResultView';
