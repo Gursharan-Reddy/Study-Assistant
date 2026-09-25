@@ -1,7 +1,9 @@
 import { parseAndValidateResult } from './validateResult';
 
+const API_URL = import.meta.env.VITE_API_URL || 'https://study-assistant-sxf3.onrender.com';
+
 export async function callBackendApi(prompt) {
-  const response = await fetch('http://localhost:5000/api/generate', {
+  const response = await fetch(`${API_URL}/api/generate`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt }),
